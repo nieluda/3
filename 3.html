@@ -1,0 +1,249 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<link href="css/3.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-1.11.1.min.js" type="text/javascript"></script>
+<script src="js/kxbdSuperMarquee_cc.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(document).ready(function(e) {
+	$('.sub_nav').hide()
+	
+    
+	 $('.nav>li').hover(function(){
+		$(this).children('.sub_nav').stop().slideDown()
+		$(this).children('a').css('background-color','#000')
+		},function(){
+		$('.sub_nav').stop().slideUp()
+		$(this).children('a').css('background-color','')
+		})
+	$('.sub_nav>li').hover(
+		function(){$(this).children('a').css('color','#fff')},
+		function(){$(this).children('a').css('color','')}
+		)
+		$('#marquee').kxbdSuperMarquee({
+			distance:288,
+			duration:20,
+			time:2,
+ 			direction: 'left',
+			btnGo:{left:'#goL',right:'#goR'}	
+			})
+		$('#banner').kxbdSuperMarquee({
+			distance:1116,
+			duration:20,
+			time:2,
+ 			direction: 'left',
+			btnGo:{left:'#goL1',right:'#goR1'}	
+			})
+
+
+});
+$(function(){  
+        //当滚动条的位置处于距顶部100像素以下时，跳转链接出现，否则消失  
+        $(function () {  
+            $(window).scroll(function(){  
+                if ($(window).scrollTop()>100){  
+                    $("#back-to-top").fadeIn(1500);  
+                }  
+                else  
+                {  
+                    $("#back-to-top").fadeOut(1500);  
+                }  
+            });  
+  
+            //当点击跳转链接后，回到页面顶部位置  
+  
+            $("#back-to-top").click(function(){  
+                $('body,html').animate({scrollTop:0},1000);  
+                return false;  
+            });  
+        });  
+    }); 
+</script>
+</head>
+<body>
+<div id="header">
+  <div class="header_inner">
+    <h2>PHOTO PORTFOLI</h2>
+    <form>
+      <input type="text" class="text" value="search">
+      <input type="button" class="button" >
+    </form>
+  </div>
+</div>
+<div id="menu">
+<div class="menu_inner">
+<ul class="nav">
+<li><a href="#">HOME</a></li>
+<li><a href="#" >ABOUT</a>
+  <div class="blank"></div>
+  <ul class="sub_nav">
+    <li><a href="#">HISTORY</a></li>
+    <li><a href="#">TEAM</a></li>
+    <li><a href="#">FAQS</a></li>
+  </ul>
+</li>
+			<li><a href="#" >PORTFOLIO</a>
+  <div class="blank"></div>
+  <ul class="sub_nav">
+    <li><a href="#">HISTORY</a></li>
+    <li><a href="#">TEAM</a></li>
+    <li><a href="#">FAQS</a></li>
+  </ul>
+</li>
+			<li><a href="#">BLOG</a>
+  <div class="blank"></div>
+  <ul class="sub_nav">
+    <li><a href="#">HISTORY</a></li>
+    <li><a href="#">TEAM</a></li>
+    <li><a href="#">FAQS</a></li>
+  </ul>
+</li>
+<li><a href="#">SREVICES</a>
+  <div class="blank"></div>
+  <ul class="sub_nav">
+    <li><a href="#">HISTORY</a></li>
+    <li><a href="#">TEAM</a></li>
+    <li><a href="#">FAQS</a></li>
+  </ul>
+</li>
+<li><a href="#">CONTACT</a>
+  <div class="blank"></div>
+  <ul class="sub_nav">
+    <li><a href="#">HISTORY</a></li>
+    <li><a href="#">TEAM</a></li>
+    <li><a href="#">FAQS</a></li>
+  </ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="main">
+	<div class="main_inner">
+    	<div id="banner">
+ 			<ul>
+ 				<li><img src="images/Jellyfish.jpg"/></li>
+  				<li><img src="images/Desert.jpg"/></li>
+                <li><img src="images/Chrysanthemum.jpg"/></li>
+                <li><img src="images/Penguins.jpg"/></li>
+  			</ul>
+ 		</div>
+        <div id="control1"><a href="javascript:void(0);" id="goL1"><img src="images/arrow2.png"/></a> <a href="javascript:void(0);" id="goR1"><img src="images/arrow223.png"/></a></div>
+		<div class="main_bot">
+			<div class="main_bot_l">
+            	<h2>SHORTLY <span>ABOUT ME</span></h2>
+                <div class="main_bot_pic"><img src="images/botpic_03.jpg"/></div>
+                <div class="main_bot_txt">
+                	<h3>LOREM IO SUM DOLOR SIT AMET CONSECTETUR ADIPISCING ELIT.</h3>
+                    <p>Donec rhoncus gravida orci sit amet condimentum nisi bibendum eget Nullam scelerisque suscipit metus.Praesent sodales luctus mi faucibus malesusda ipsum sagittis vitae.Insodales leo </p>
+                    <p class="sub_nav">Let aliquam trllus nibh eget mi.Nulla molestie augue purus.Cum sociis natoque penatibus et magnis dis parturient montes nascetue ridiculus mus.Vivamus ultri.</p>
+                </div>
+            </div>
+            <div class="main_bot_r">
+            	<h2>CLIENTS <span>SAY</span></h2>
+                <div><img src="images/text_03.jpg"/></div>
+                <h4>JOHN BROWN</h4>
+                <p>Eveniet redumsa etolupta.</p>
+            </div>
+		</div>
+      <p id="back-to-top"><a href="#top"><img src="images/return_18.jpg"/></a></p>
+    </div>
+</div>
+<div id="news">
+<div class="news_inner">
+<div class="news_title">
+	<h2>LATEST <span>WORKS</span></h2>
+</div>
+<div id="marquee">
+  <ul>
+    <li><img src="images/news_07.jpg"/>
+     	<h3>CRAS FERMENTUM AUGUE EGET</h3><br>
+    	<p>25th September 2012</p>
+        </li>
+    <li><img src="images/news_13.jpg"/>
+    <h3>CRAS FERMENTUM AUGUE EGET</h3><br>
+    	<p>25th September 2012</p></li>
+    <li><img src="images/news_11.jpg"/><h3>CRAS FERMENTUM AUGUE EGET</h3><br>
+    	<p>25th September 2012</p></li>
+    <li><img src="images/news_09.jpg"/><h3>CRAS FERMENTUM AUGUE EGET</h3><br>
+    	<p>25th September 2012</p></li>
+    <li><img src="images/news_09.jpg"/><h3>CRAS FERMENTUM AUGUE EGET</h3><br>
+    	<p>25th September 2012</p></li>
+    <li><img src="images/news_11.jpg"/><h3>CRAS FERMENTUM AUGUE EGET</h3><br>
+    	<p>25th September 2012</p></li>
+    <li><img src="images/news_13.jpg"/><h3>CRAS FERMENTUM AUGUE EGET</h3><br>
+    	<p>25th September 2012</p></li>
+    <li><img src="images/news_09.jpg"/><h3>CRAS FERMENTUM AUGUE EGET</h3><br>
+    	<p>25th September 2012</p></li>
+    <li><img src="images/news_11.jpg"/><h3>CRAS FERMENTUM AUGUE EGET</h3><br>
+    	<p>25th September 2012</p></li>
+    <li><img src="images/news_07.jpg"/><h3>CRAS FERMENTUM AUGUE EGET</h3><br>
+    	<p>25th September 2012</p></li>
+    <li><img src="images/news_11.jpg"/><h3>CRAS FERMENTUM AUGUE EGET</h3><br>
+    	<p>25th September 2012</p></li>
+    <li><img src="images/news_09.jpg"/><h3>CRAS FERMENTUM AUGUE EGET</h3><br>
+    	<p>25th September 2012</p></li>
+    <li><img src="images/news_13.jpg"/><h3>CRAS FERMENTUM AUGUE EGET</h3><br>
+    	<p>25th September 2012</p></li>
+    <li><img src="images/news_11.jpg"/><h3>CRAS FERMENTUM AUGUE EGET</h3><br>
+    	<p>25th September 2012</p></li>
+    <li><img src="images/news_09.jpg"/><h3>CRAS FERMENTUM AUGUE EGET</h3><br>
+    	<p>25th September 2012</p></li>
+    <li><img src="images/news_11.jpg"/><h3>CRAS FERMENTUM AUGUE EGET</h3><br>
+    	<p>25th September 2012</p></li>
+  </ul>
+</div>
+<div id="control"><a href="javascript:void(0);" id="goL"><img src="images/arrow_12.jpg"/></a> <a href="javascript:void(0);" id="goR"><img src="images/arrow_14.jpg"/></a></div>
+</div>
+</div>
+<div id="footer">
+	<div class="footer_inner">
+    	<div class="footer_text">
+        	<h3>INSPIRATION</h3>
+            <ul>
+            	<li><p>Fashion</p></li>
+            	<li><p>Beauty</p></li>
+            	<li><p>Nature</p></li>
+            </ul>
+        </div>
+        <div class="footer_text">
+        	<h3>JOIN IN</h3>
+            <ul>
+            	<li><p>Sign Up</p></li>
+            	<li><p>Forums</p></li>
+            	<li><p>Promotions</p></li>
+            </ul>
+        </div>
+        <div class="footer_text">
+        	<h3>ADVICE</h3>
+            <ul>
+            	<li><p>FAQ</p></li>
+            	<li><p>Solutions</p></li>
+            	<li><p>Contacts</p></li>
+            </ul>
+        </div>
+        <div class="footer_text">
+        	<h3>DOWNLOADS</h3>
+            <ul>
+            	<li><p>Press Releases</p></li>
+            	<li><p>Banners $ Logos</p></li>
+            	<li><p>Podcasts</p></li>
+            </ul>
+        </div>
+        <div class="footer_text">
+        	<h3>GET IN TOUCH</h3>
+            <ul>
+            	<li>
+            	  <p class="facebook"><a href="#">Facebook</a></p></li>
+            	<li>
+            	  <p class="twitter"><a href="#">Twitter</a></p></li>
+            	<li>
+            	  <p class="rss"><a href="#">RSS Feed</a></p></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div id="copyright"></div>
+</body>
+</html>
